@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_menu">#E2E2E0</color>
+    <color name="bg_myrecord">#87c033</color>
+    <color name="bg_medication_reminder">#628179</color>
+    <color name="bg_flowup_reminder">#21AABD</color>
+    <color name="bg_health_knowledge">#644C64</color>
+    <color name="bg_view_announcement">#BB2B4C</color>
+    <color name="bg_view_health_education">#217247</color>
+    <color name="light_black">#bb000000</color>
+    <color name="black_transparent">#88000000</color>
+    <color name="white_transparent">#55ffffff</color>
+    <color name="deep_gray">#dd000000</color>
+    <color name="light_gray">#BBBBBB</color>
+    <color name="gray">#cccccc</color>
+</resources>
