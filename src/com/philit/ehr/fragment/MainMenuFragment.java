@@ -1,8 +1,10 @@
 package com.philit.ehr.fragment;
 
 import com.philit.ehr.R;
+import com.philit.ehr.activity.LoginActivity;
 import com.philit.ehr.activity.MainActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
