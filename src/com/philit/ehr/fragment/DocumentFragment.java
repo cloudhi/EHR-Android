@@ -9,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 public class DocumentFragment extends Fragment{
 
@@ -21,7 +22,7 @@ public class DocumentFragment extends Fragment{
 			mPos = savedInstanceState.getInt("mPos");
 		mainView = inflater.inflate(R.layout.document_frame, null);
 		DocumentViewPager documentViewPager = (DocumentViewPager)mainView.findViewById(R.id.documentViewPager);
-		
+		Toast.makeText(getActivity(), "健康知识宣传", Toast.LENGTH_SHORT).show();
 		return mainView;
 	}
 	

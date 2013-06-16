@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:clickable="true"
+       android:background="@color/bg_myrecord">
+       <ImageButton 
+           android:id="@+id/arrow"
+           android:layout_width="50dp"
+           android:layout_height="50dp"
+           android:src="@drawable/arrow_down"
+           android:background="@android:color/transparent"/>
+       <View 
+           android:layout_width="1dp"
+           android:layout_height="match_parent"
+           android:background="@android:color/white"/>
+       <TextView 
+           android:id="@+id/title"
+           android:layout_width="wrap_content"
+           android:layout_height="match_parent"
+           android:textColor="@android:color/white"
+           android:gravity="center_vertical"
+           android:paddingLeft="10dp"
+           android:paddingRight="20dp"
+           android:textSize="20sp"
+           android:text="@string/myrecord"/>
+</LinearLayout>

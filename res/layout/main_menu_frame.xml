@@ -16,7 +16,7 @@
 	    	        android:layout_height="match_parent"
 	    	        android:background="@android:color/white"/>
 	    	    <LinearLayout 
-	    	        android:id="@+id/user_info"
+	    	        android:id="@+id/user_info_layout"
 	    	        android:clickable="true"
 	    	        android:layout_width="match_parent"
 	    	        android:layout_height="match_parent"
@@ -39,6 +39,7 @@
 	    	    </LinearLayout>
 	    	</LinearLayout>
 	    	<LinearLayout 
+	    	    android:id="@+id/myrecord_layout"
 	    	    android:layout_width="match_parent"
 	    	    android:layout_height="match_parent"
 	    	    android:orientation="vertical">
@@ -66,6 +67,7 @@
 	    	            android:text="@string/myrecord"/>
 	    	    </LinearLayout>
 	    	    <LinearLayout 
+	    	        android:id="@+id/medication_layout"
 	    	        android:layout_width="wrap_content"
 	    	        android:layout_height="50dp"
 	    	        android:layout_marginTop="20dp"
@@ -89,6 +91,7 @@
 	    	            android:text="@string/medication_reminder"/>
 	    	    </LinearLayout>
 	    	    <LinearLayout 
+	    	        android:id="@+id/fllowup_layout"
 	    	        android:layout_width="wrap_content"
 	    	        android:layout_height="50dp"
 	    	        android:layout_marginTop="20dp"
@@ -112,6 +115,7 @@
 	    	            android:text="@string/flowup_reminder"/>
 	    	    </LinearLayout>
 	    	    <LinearLayout 
+	    	        android:id="@+id/health_layout"
 	    	        android:layout_width="wrap_content"
 	    	        android:layout_height="50dp"
 	    	        android:layout_marginTop="20dp"
@@ -135,6 +139,7 @@
 	    	            android:text="@string/health_knowledge"/>
 	    	    </LinearLayout>
 	    	    <LinearLayout 
+	    	        android:id="@+id/announcement_layout"
 	    	        android:layout_width="wrap_content"
 	    	        android:layout_height="50dp"
 	    	        android:layout_marginTop="20dp"
@@ -158,6 +163,7 @@
 	    	            android:text="@string/view_announcement"/>
 	    	    </LinearLayout>
 	    	    <LinearLayout 
+	    	        android:id="@+id/education_layout"
 	    	        android:layout_width="wrap_content"
 	    	        android:layout_height="50dp"
 	    	        android:layout_marginTop="20dp"

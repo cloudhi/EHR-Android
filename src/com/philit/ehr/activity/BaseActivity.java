@@ -59,7 +59,7 @@ public class BaseActivity extends SlidingFragmentActivity {
 
 		//getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
-		user_info = (LinearLayout) findViewById(R.id.user_info);
+		user_info = (LinearLayout) findViewById(R.id.user_info_layout);
 		user_info.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
