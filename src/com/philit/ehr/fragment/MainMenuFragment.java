@@ -67,6 +67,8 @@ public class MainMenuFragment extends Fragment implements OnClickListener{
 		case R.id.fllowup_layout:
 			mainActivity.switchContent(new FllowUpFragment());
 			break;
+		case R.id.health_layout:
+			mainActivity.switchContent(new DocumentFragment());
 		case R.id.announcement_layout:
 			mainActivity.switchContent(new AnnouncementFragment());
 			break;

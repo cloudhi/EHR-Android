@@ -815,10 +815,10 @@ containing a value of this type.
         public static final int abs__bright_foreground_inverse_holo_dark=0x7f060007;
         public static final int abs__bright_foreground_inverse_holo_light=0x7f060008;
         public static final int abs__holo_blue_light=0x7f060009;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f060018;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f060019;
-        public static final int abs__primary_text_holo_dark=0x7f06001a;
-        public static final int abs__primary_text_holo_light=0x7f06001b;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f060019;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f06001a;
+        public static final int abs__primary_text_holo_dark=0x7f06001b;
+        public static final int abs__primary_text_holo_light=0x7f06001c;
         public static final int bg_flowup_reminder=0x7f06000d;
         public static final int bg_health_knowledge=0x7f06000e;
         public static final int bg_login=0x7f060011;
@@ -833,6 +833,7 @@ containing a value of this type.
         public static final int holo_blue_bright=0x7f060000;
         public static final int light_black=0x7f060012;
         public static final int light_gray=0x7f060016;
+        public static final int line=0x7f060018;
         public static final int white_transparent=0x7f060014;
     }
     public static final class dimen {
@@ -1084,17 +1085,22 @@ containing a value of this type.
         public static final int item_menu_selector=0x7f020077;
         public static final int login=0x7f020078;
         public static final int login_form=0x7f020079;
-        public static final int octocat=0x7f02007a;
-        public static final int octocat_scaled=0x7f02007b;
-        public static final int ostrich=0x7f02007c;
-        public static final int peacock=0x7f02007d;
-        public static final int penguin=0x7f02007e;
-        public static final int shadow=0x7f02007f;
-        public static final int shadowright=0x7f020080;
-        public static final int sync=0x7f020081;
-        public static final int toucan=0x7f020082;
-        public static final int turkey=0x7f020083;
-        public static final int vulture=0x7f020084;
+        public static final int myrecord_boy=0x7f02007a;
+        public static final int myrecord_boy_left_angle=0x7f02007b;
+        public static final int myrecord_gril=0x7f02007c;
+        public static final int myrecord_gril_left_angle=0x7f02007d;
+        public static final int myrecord_right_angle=0x7f02007e;
+        public static final int octocat=0x7f02007f;
+        public static final int octocat_scaled=0x7f020080;
+        public static final int ostrich=0x7f020081;
+        public static final int peacock=0x7f020082;
+        public static final int penguin=0x7f020083;
+        public static final int shadow=0x7f020084;
+        public static final int shadowright=0x7f020085;
+        public static final int sync=0x7f020086;
+        public static final int toucan=0x7f020087;
+        public static final int turkey=0x7f020088;
+        public static final int vulture=0x7f020089;
     }
     public static final class id {
         public static final int abs__action_bar=0x7f050027;
@@ -1287,26 +1293,42 @@ containing a value of this type.
         public static final int apache_license=0x7f0a0029;
         public static final int app_name=0x7f0a000f;
         public static final int attach=0x7f0a0013;
+        public static final int blood_type=0x7f0a0037;
         public static final int changing_fragments=0x7f0a001c;
         public static final int contact=0x7f0a0027;
+        public static final int current_address=0x7f0a003c;
+        public static final int edcuation=0x7f0a003a;
+        public static final int familycode=0x7f0a0043;
+        public static final int filing_units=0x7f0a0046;
+        public static final int filing_userID=0x7f0a0047;
         public static final int flowup_reminder=0x7f0a002d;
         public static final int forget_password=0x7f0a0034;
         public static final int general=0x7f0a0011;
         public static final int github=0x7f0a0021;
         public static final int github_label=0x7f0a0022;
         public static final int health_knowledge=0x7f0a002e;
+        public static final int hometown=0x7f0a0035;
         public static final int last_sync=0x7f0a0031;
         public static final int left=0x7f0a001e;
         public static final int left_and_right=0x7f0a0020;
         public static final int licenses=0x7f0a0026;
+        public static final int marriage_status=0x7f0a0038;
+        public static final int medicalNO=0x7f0a0042;
         public static final int medication_reminder=0x7f0a002c;
+        public static final int mobileNo=0x7f0a0039;
         public static final int myrecord=0x7f0a002b;
+        public static final int nation=0x7f0a0036;
         public static final int no_email=0x7f0a002a;
         public static final int password=0x7f0a0033;
+        public static final int payment_type=0x7f0a0040;
+        public static final int permanent_type=0x7f0a003b;
         public static final int properties=0x7f0a0010;
+        public static final int relationship=0x7f0a0044;
+        public static final int responsibility_userID=0x7f0a0045;
         public static final int responsive_explanation=0x7f0a0024;
         public static final int responsive_ui=0x7f0a001d;
         public static final int right=0x7f0a001f;
+        public static final int socialNO=0x7f0a0041;
         public static final int title_bar=0x7f0a0014;
         public static final int title_bar_content=0x7f0a0016;
         public static final int title_bar_slide=0x7f0a0015;
@@ -1315,6 +1337,9 @@ containing a value of this type.
         public static final int view_health_education=0x7f0a0030;
         public static final int viewpager=0x7f0a0012;
         public static final int what_is_this=0x7f0a0023;
+        public static final int working_contact_name=0x7f0a003e;
+        public static final int working_contact_tel=0x7f0a003f;
+        public static final int working_units=0x7f0a003d;
     }
     public static final class style {
         /** 

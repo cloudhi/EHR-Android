@@ -66,4 +66,23 @@
     <string name="username">用户名</string>
     <string name="password">密码</string>
     <string name="forget_password">忘记密码？</string>
+    <string name="hometown">籍贯：</string>
+    <string name="nation">民族：</string>
+    <string name="blood_type">血型：</string>
+    <string name="marriage_status">婚姻状态：</string>
+    <string name="mobileNo">联系方式：</string>
+    <string name="edcuation">文化程度：</string>
+    <string name="permanent_type">常住类型：</string>
+    <string name="current_address">现住址：</string>
+    <string name="working_units">工作单位：</string>
+    <string name="working_contact_name">职位联系人姓名：</string>
+    <string name="working_contact_tel">职位联系人电话：</string>
+    <string name="payment_type">付费类型：</string>
+    <string name="socialNO">社保号：</string>
+    <string name="medicalNO">医保号：</string>
+    <string name="familycode">家庭编号：</string>
+    <string name="relationship">与户主关系：</string>
+    <string name="responsibility_userID">责任医生：</string>
+    <string name="filing_units">建档单位：</string>
+    <string name="filing_userID">建档人：</string>
 </resources>
