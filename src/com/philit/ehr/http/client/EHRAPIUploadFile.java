@@ -10,14 +10,14 @@ import com.philit.ehr.http.base.HttpRequestJsonResponseHandler;
 import com.philit.ehr.http.base.HttpRequestResponseHandler;
 import com.philit.ehr.http.client.EHRClient.ResultHandler;
 
-public class NewWeekAPIUploadFile extends NewWeekApiBase {
+public class EHRAPIUploadFile extends EHRApiBase {
 
 	private static final String UPLOAD_FILE_URL = "/file";
 	private static final String PARAM_KEY_AUTH_TOKEN = "auth_token";
 	private static final String PARAM_KEY_DATA = "data";
 	private static final String ERROR_MSG = "error_msg";
 
-	public NewWeekAPIUploadFile(String baseUrl, String authToken,
+	public EHRAPIUploadFile(String baseUrl, String authToken,
 			String filePath, final ResultHandler resultHandler) {
 		super(baseUrl + UPLOAD_FILE_URL);
 
@@ -32,10 +32,10 @@ public class NewWeekAPIUploadFile extends NewWeekApiBase {
 
 			@Override
 			public void jsonFinish(JSONObject jsonObject) {
-				NewWeekApiBase.Status responseStatus = NewWeekAPIUploadFile.super
+				EHRApiBase.Status responseStatus = EHRAPIUploadFile.super
 						.getRequestStatus(jsonObject);
 				if (resultHandler != null) {
-					if (responseStatus == NewWeekApiBase.Status.SUCCESS) {
+					if (responseStatus == EHRApiBase.Status.SUCCESS) {
 						resultHandler.requestFinish(jsonObject);
 					} else {
 						resultHandler.requestFail(jsonObject.optString(

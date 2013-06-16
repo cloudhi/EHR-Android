@@ -16,7 +16,7 @@ public class LoginFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		if (mPos == -1 && savedInstanceState != null)
 			mPos = savedInstanceState.getInt("mPos");
-		return inflater.inflate(R.layout.login, null);
+		return inflater.inflate(R.layout.login_frame, null);
 	}
 	
 	@Override

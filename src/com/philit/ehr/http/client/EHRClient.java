@@ -33,7 +33,7 @@ public class EHRClient extends HttpRequestQueue {
 	public void uploadFile(String authToken, String filePath,
 			final ResultHandler resultHandler) {
 		if (context != null) {
-			NewWeekAPIUploadFile api = new NewWeekAPIUploadFile(BASE_URL,
+			EHRAPIUploadFile api = new EHRAPIUploadFile(BASE_URL,
 					authToken, filePath, resultHandler);
 			super.addRequest(api);
 		}
@@ -55,6 +55,18 @@ public class EHRClient extends HttpRequestQueue {
 					url, saveFilePath);
 			request.setDownloadEventListener(downloadEventListener);
 			super.addRequest(request);
+		}
+	}
+	
+	/**
+	 * 获得所有期刊列表
+	 * @param publish_id
+	 * @param device_id
+	 * @param resultHandler
+	 */
+	public void listArticle2(int periodical_id, ResultHandler resultHandler) {
+		if (context != null) {
+			
 		}
 	}
 

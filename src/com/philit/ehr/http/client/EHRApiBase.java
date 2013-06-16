@@ -6,7 +6,7 @@ import android.util.Log;
 
 import com.philit.ehr.http.base.HttpRequestOperation;
 
-public class NewWeekApiBase extends HttpRequestOperation {
+public class EHRApiBase extends HttpRequestOperation {
 
 	public enum Status {
 		SUCCESS, ERROR,
@@ -17,7 +17,7 @@ public class NewWeekApiBase extends HttpRequestOperation {
 
 	private static final String STATUS_KEY = "status";
 
-	public NewWeekApiBase(String url) {
+	public EHRApiBase(String url) {
 		super(url);
 		Log.i("jiang", "WeitianClient request url : " + url);
 	}
