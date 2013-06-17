@@ -6,6 +6,7 @@ import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.R.integer;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -17,16 +18,18 @@ import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.philit.ehr.R;
 import com.philit.ehr.db.PeriodicalData;
 
-public class NewWeekView extends LinearLayout{
+public class DocumentView extends LinearLayout{
 
 	private List<BinderView> binderViews;
 	private List<PeriodicalData> periodicalDatas;
 	private BinderLayout binderLayout;
 	private View mainView, halfTransparentView;
+	private TextView pageIndexTv;
 	private Timer timer1, timer2;
 	private int index;
 	private int num1 = -1, num2 = -1;
@@ -38,7 +41,7 @@ public class NewWeekView extends LinearLayout{
 	private FirstTimerTask firstTimerTask;
 	private ArrayAdapter<PeriodicalData> adapter;
 	
-	public NewWeekView(Context context) {
+	public DocumentView(Context context) {
 		super(context);
 		this.context = context;
 		this.binderViews = new ArrayList<BinderView>();
@@ -49,7 +52,7 @@ public class NewWeekView extends LinearLayout{
 	/**
 	 * Default constructor.
 	 */
-	public NewWeekView(Context context, AttributeSet attrs) {
+	public DocumentView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		this.context = context;
 		initView();
@@ -57,7 +60,7 @@ public class NewWeekView extends LinearLayout{
 	
 	@SuppressWarnings("deprecation")
 	public void initView() {
-		mainView = inflate(getContext(), R.layout.view_new_week, null);
+		mainView = inflate(getContext(), R.layout.view_document, null);
 		LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
 		addView(mainView, params);
 		
@@ -66,6 +69,8 @@ public class NewWeekView extends LinearLayout{
 		binderLayout = (BinderLayout) mainView.findViewById(R.id.binderLayout);
 		
 		halfTransparentView = mainView.findViewById(R.id.half_transparent);
+		
+		pageIndexTv = (TextView) mainView.findViewById(R.id.pageIndex);
 		
 		pause = true;  //默认暂停
 		
@@ -95,14 +100,14 @@ public class NewWeekView extends LinearLayout{
 					if (firstTimerTask == null) {
 						firstTimerTask = new FirstTimerTask();
 						timer1 = new Timer(true);
-						timer1.schedule(firstTimerTask, 1000, 500);
+						timer1.schedule(firstTimerTask, 1000, 400);
 					}
 				}
 			}else {
 				synchronized (FirstTimerTask.class) {
 					firstTimerTask = new FirstTimerTask();
 					timer1 = new Timer(true);
-					timer1.schedule(firstTimerTask, 1000, 500);
+					timer1.schedule(firstTimerTask, 1000, 400);
 				}
 			}
 		}else {
@@ -123,7 +128,7 @@ public class NewWeekView extends LinearLayout{
 					if (bigTimerTask == null) {
 						bigTimerTask = new BigTimerTask();
 						timer2 = new Timer(true);
-						timer2.schedule(bigTimerTask, 3000 + 500*(binderViews.size()), 3000);
+						timer2.schedule(bigTimerTask, 3000 + 400*(binderViews.size()), 2000);
 					}
 				}
 			}
@@ -202,26 +207,6 @@ public class NewWeekView extends LinearLayout{
 	}
 	
 	@Override
-	public boolean onInterceptTouchEvent(MotionEvent event) {
-		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			downY = event.getY();
-			break;
-
-		case MotionEvent.ACTION_UP:
-			upY = event.getY();
-			//往下拉
-			if (downY < upY) {
-				
-			}else{
-				
-			}
-			break;
-		}
-		return false;
-	}
-	
-	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		if (event.getAction() == MotionEvent.ACTION_DOWN) {
 			return false;
@@ -229,23 +214,6 @@ public class NewWeekView extends LinearLayout{
 		return super.onTouchEvent(event);
 	}
 
-	public void showPopupWindow() {
-		setPause(true);
-		alphaAnimation = new AlphaAnimation(0, 1);
-		alphaAnimation.setDuration(300);
-		halfTransparentView.setAnimation(alphaAnimation);
-		halfTransparentView.setVisibility(View.VISIBLE);
-	}
-	
-	public void hidePopupWindow() {
-		Log.i("hidePopupWindow", "hidePopupWindow");
-		alphaAnimation = new AlphaAnimation(1, 0);
-		alphaAnimation.setDuration(300);
-		halfTransparentView.setAnimation(alphaAnimation);
-		halfTransparentView.setVisibility(View.GONE);
-		setPause(false);
-	}
-	
 	public void removeAllView() {
 		binderLayout.removeAllView();
 	}
@@ -266,19 +234,11 @@ public class NewWeekView extends LinearLayout{
 		return binderViews;
 	}
 
-	public void setList(List<BinderView> list) {
+	public void setList(List<BinderView> list, int pageIndex) {
 		this.binderViews = list;
 		binderLayout.setDataSources(binderViews);
 		binderLayout.setAutoFlip(true);
-	}
-
-	public List<PeriodicalData> getWeekItemDatas() {
-		return periodicalDatas;
-	}
-
-	@SuppressWarnings("deprecation")
-	public void setWeekItemDatas(List<PeriodicalData> periodicalDatas, int currentPeriodicalId, int position) {
-		this.periodicalDatas = periodicalDatas;
+		pageIndexTv.setText(pageIndex + "");
 	}
 
 	public boolean isPause() {

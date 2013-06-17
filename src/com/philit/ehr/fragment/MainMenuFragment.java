@@ -39,6 +39,9 @@ public class MainMenuFragment extends Fragment implements OnClickListener{
 		fllowup_layout = (LinearLayout) mainView.findViewById(R.id.fllowup_layout);
 		fllowup_layout.setOnClickListener(this);
 		
+		health_layout = (LinearLayout) mainView.findViewById(R.id.health_layout);
+		health_layout.setOnClickListener(this);
+		
 		announcement_layout = (LinearLayout) mainView.findViewById(R.id.announcement_layout);
 		announcement_layout.setOnClickListener(this);
 		
@@ -69,6 +72,7 @@ public class MainMenuFragment extends Fragment implements OnClickListener{
 			break;
 		case R.id.health_layout:
 			mainActivity.switchContent(new DocumentFragment());
+			break;
 		case R.id.announcement_layout:
 			mainActivity.switchContent(new AnnouncementFragment());
 			break;

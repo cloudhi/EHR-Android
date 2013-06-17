@@ -14,11 +14,15 @@ public class Define {
     
     public static final String[] INTERNAL_STORAGE_PATHS = new String[]{"/mnt/", "/emmc/"};
     public static final String RESOURCE_PATH = "EHR/resource/"; 
+    public static final String IMAGE_PATH = "EHR/resource/image"; 
+    public static final String DOCUMENT_PATH = "EHR/resource/document/"; 
     public static final String TEMPFILE_PATH = "EHR/temp/";      
     public static final String LOG_PATH = "EHR/log/";
     public static final String CACHE_PATH = "EHR/cache/";
     
-    public static final String RESOURCE_PATH_NOSD = "resource/";   
+    public static final String RESOURCE_PATH_NOSD = "resource/"; 
+    public static final String IMAGE_PATH_NOSD = "resource/image";   
+    public static final String DOCUMENT_PATH_NOSD = "resource/document";   
     public static final String TEMPFILE_PATH_NOSD = "temp/";
     public static final String LOG_PATH_NOSD = "log/";
     

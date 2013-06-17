@@ -716,7 +716,7 @@ public class BinderView extends FrameLayout {
 			// If there's room for animation.
 			if (Math.abs(mFlipPosition - mFlipPositionTarget) > 0.01f) {
 				long currentTime = SystemClock.uptimeMillis();
-				float t = Math.min(1f, (currentTime - mLastRenderTime) * .01f);
+				float t = Math.min(1f, (currentTime - mLastRenderTime) * .015f);
 				mFlipPosition = mFlipPosition
 						+ (mFlipPositionTarget - mFlipPosition) * t;
 				mLastRenderTime = currentTime;

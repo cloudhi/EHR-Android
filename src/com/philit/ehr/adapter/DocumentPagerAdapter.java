@@ -7,10 +7,10 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-public class WeekPagerAdapter extends PagerAdapter{
+public class DocumentPagerAdapter extends PagerAdapter{
 	public List<View> mListViews;
 
-	public WeekPagerAdapter(List<View> mListViews) {
+	public DocumentPagerAdapter(List<View> mListViews) {
 		this.mListViews = mListViews;
 	}
 

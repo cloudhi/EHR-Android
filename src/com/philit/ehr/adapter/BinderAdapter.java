@@ -28,6 +28,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+import com.philit.ehr.R;
 import com.philit.ehr.view.MyTextView;
 
 /**
@@ -46,14 +47,14 @@ public class BinderAdapter{
 		for (int i = 0; i < bitmaps.size(); i++) {
 			TextView textView = new MyTextView(context, title);
 			//textView.setText(title);
-			textView.setBackgroundColor(Color.RED);
+			textView.setBackgroundColor(context.getResources().getColor(R.color.deep_red));
 			textView.setTextColor(Color.WHITE);
 			
 			ImageView imageView = new ImageView(context);
 			//imageView.setBackgroundDrawable(ImageTools.bitmapToDrawable(bitmaps.get(i)));
 		    imageView.setImageBitmap(bitmaps.get(i));
 		    imageView.setLayoutParams(params);
-		    
+		    imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_myrecord));
 		    list.add(textView);
 		    list.add(imageView);
 		}

@@ -25,6 +25,8 @@ public class EHRApp extends Application {
     private String internalStoragePath;
     private String currentDirectory;
     public String resourcePath;
+    public String documentPath;
+    public String imagePath;
     public String tempDirectory;
     public String sdcardPath;
     public String logPath;
@@ -155,6 +157,8 @@ public class EHRApp extends Application {
         initInternalStoragePath();
         this.currentDirectory = this.getFilesDir().getAbsolutePath().concat(File.separator);
         this.resourcePath = this.currentDirectory + Define.RESOURCE_PATH_NOSD;
+        this.documentPath = this.currentDirectory + Define.DOCUMENT_PATH_NOSD;
+        this.imagePath = this.currentDirectory + Define.IMAGE_PATH_NOSD;
         this.tempDirectory = this.currentDirectory + Define.TEMPFILE_PATH_NOSD;
         this.logPath = this.currentDirectory + Define.LOG_PATH_NOSD;
         this.cachePath = this.currentDirectory + Define.CACHE_PATH;
@@ -173,17 +177,27 @@ public class EHRApp extends Application {
         if (null != storagePath)
         {
             this.resourcePath = storagePath.concat(File.separator) + Define.RESOURCE_PATH;
+            this.documentPath = storagePath.concat(File.separator) + Define.DOCUMENT_PATH;
+            this.imagePath = storagePath.concat(File.separator) + Define.IMAGE_PATH;
             this.tempDirectory = storagePath.concat(File.separator) + Define.TEMPFILE_PATH;
             this.logPath = storagePath.concat(File.separator) + Define.LOG_PATH;
             this.cachePath = storagePath.concat(File.separator) + Define.CACHE_PATH;
         }
         
         File resourceDir = new File(resourcePath);
+        File documentDir = new File(documentPath);
+        File imageDir = new File(imagePath);
         File tempDir = new File(tempDirectory);
         File logDir = new File(logPath);
         File cacheDir = new File(cachePath);
         if (!resourceDir.exists()) {
             resourceDir.mkdirs();
+        }
+        if (!documentDir.exists()) {
+        	documentDir.mkdirs();
+        }
+        if (!imageDir.exists()) {
+        	imageDir.mkdirs();
         }
         if (!tempDir.exists()) {
             tempDir.mkdirs();

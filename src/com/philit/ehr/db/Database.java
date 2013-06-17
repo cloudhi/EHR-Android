@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.R.integer;
 import android.util.Log;
 
 import com.j256.ormlite.android.apptools.OpenHelperManager;
@@ -17,6 +18,7 @@ public class Database {
 	private Dao<PeriodicalData, Integer> periodicalDao;
 	private Dao<ArticleData, Integer> articleDao;
 	private Dao<ImageData, Integer> imageDao;
+	private Dao<DocumentData, Integer> documentDao;
 
 	/**
 	 * 程序启动后马上初始化databaseHelper
@@ -60,6 +62,18 @@ public class Database {
 			}
 		}
 		return imageDao;
+	}
+	
+	public Dao<DocumentData, Integer> getDocumentDao() {
+		if (documentDao == null) {
+			try {
+				documentDao = databaseHelper.getDao(DocumentData.class);
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		return documentDao;
 	}
 	
 	/*
@@ -263,7 +277,78 @@ public class Database {
 			Log.i(TAG, "SQL fail <updateImage> : " + e.getMessage());
 		}
 	}
-
+	
+	/*
+	 * Document start
+	 */
+	
+	/**
+	 * 插入Periodical记录
+	 * @param DocumentData
+	 */
+	public void createDocument(DocumentData documentData) {
+		try {
+			getDocumentDao().createIfNotExists(documentData);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <createDocument> : " + e.getMessage());
+		}
+	}
+	
+	/**
+	 * 返回所有文档
+	 * @return
+	 */
+	public List<DocumentData> getAllDocumentList() {
+		List<DocumentData> documentDatas = new ArrayList<DocumentData>();
+		try {
+			documentDatas = getDocumentDao()
+					.queryBuilder()
+					.orderBy(DocumentData.COLUMN_NAME_DOCUMENTID, false)
+					.query();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <getDocumentList> : " + e.getMessage());
+		}
+		return documentDatas;
+	}
+	
+	/**
+	 * 返回分页文档
+	 * @return
+	 */
+	@SuppressWarnings("deprecation")
+	public List<DocumentData> getDocumentList(int pageSize, int pageIndex) {
+		List<DocumentData> documentDatas = new ArrayList<DocumentData>();
+		try {
+			documentDatas = getDocumentDao()
+					.queryBuilder()
+					.orderBy(DocumentData.COLUMN_NAME_DOCUMENTID, false)
+					.limit(pageSize)
+					.offset((pageIndex - 1) * pageSize)
+					.query();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <getDocumentList> : " + e.getMessage());
+		}
+		return documentDatas;
+	}
+	
+	/**
+	 * 返回中记录数
+	 * @return
+	 */
+	public long getAllDocumentCounts() {
+		long counts = 0;
+		try {
+			counts = getDocumentDao().countOf();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <getAllDocumentCounts> : " + e.getMessage());
+		}
+		return counts;
+	}
+	
 	// *************************
 	// AppSettings singleton (begin)
 	// *************************

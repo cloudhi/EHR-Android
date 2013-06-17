@@ -25,6 +25,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 			TableUtils.createTable(connectionSource, ArticleData.class);
 			TableUtils.createTable(connectionSource, ResourceData.class);
 			TableUtils.createTable(connectionSource, ImageData.class);
+			TableUtils.createTable(connectionSource, DocumentData.class);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

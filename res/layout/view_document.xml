@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/main_layout"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+     android:background="@android:color/transparent" >
+     
+     <RelativeLayout 
+         android:id="@+id/headLayout"
+         android:layout_width="fill_parent"
+         android:layout_height="57dp"
+         android:orientation="horizontal"
+         android:layout_marginBottom="10dp">
+         <TextView 
+             android:layout_width="wrap_content"
+             android:layout_height="match_parent"
+             android:layout_alignParentLeft="true"
+             android:text="@string/health_knowledge"
+             android:textSize="20sp"
+             android:drawableLeft="@drawable/arrow_left"
+             android:singleLine="true"
+             android:gravity="center_vertical"
+             android:paddingTop="10dp"
+             android:paddingLeft="10dp"
+             android:drawablePadding="5dp"/>
+         <LinearLayout 
+	   	       android:layout_width="wrap_content"
+	   	       android:layout_height="match_parent"
+	   	       android:layout_alignParentRight="true"
+	   	       android:orientation="vertical">
+	   	       <ImageView 
+	   	           android:layout_width="wrap_content"
+	   	           android:layout_height="wrap_content"
+	   	           android:layout_gravity="right"
+	   	           android:src="@drawable/health_right_angle"/>
+	   	       <TextView 
+	   	           android:id="@+id/pageIndex"
+	   	           android:layout_width="wrap_content"
+	   	           android:layout_height="wrap_content"
+	   	           android:layout_marginTop="-15dp"
+	   	           android:layout_marginRight="10dp"
+	   	           android:gravity="center"
+	   	           android:background="@drawable/bg_page"/>
+	   	   </LinearLayout>
+     </RelativeLayout>
+     
+	 <com.philit.ehr.view.BinderLayout
+         android:id="@+id/binderLayout"
+         android:layout_width="fill_parent"
+         android:layout_height="fill_parent"
+         android:background="@android:color/transparent"
+         android:layout_below="@id/headLayout">
+     </com.philit.ehr.view.BinderLayout>
+     
+     <View 
+        android:id="@+id/half_transparent"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black_transparent"
+        android:visibility="gone"/>
+	
+ </RelativeLayout>
