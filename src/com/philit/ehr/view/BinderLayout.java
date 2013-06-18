@@ -80,56 +80,56 @@ public class BinderLayout extends AbsoluteLayout{
 		int count = dataSources.size();
 		switch (count) {
 		case COUNT_1:
-			list.add(new ItemLayoutParams(60, 163, 200, 200));
+			list.add(new ItemLayoutParams(60, 166, 200, 200));
 			break;
 		case COUNT_2:
-			list.add(new ItemLayoutParams(10, 57, 200, 200));
-			list.add(new ItemLayoutParams(110, 267, 200, 200));
+			list.add(new ItemLayoutParams(10, 60, 200, 200));
+			list.add(new ItemLayoutParams(110, 270, 200, 200));
 			break;
 		case COUNT_3:
-			list.add(new ItemLayoutParams(10, 57, 198, 96));
-			list.add(new ItemLayoutParams(214, 160, 96, 96));
-			list.add(new ItemLayoutParams(10, 263, 200, 200));
+			list.add(new ItemLayoutParams(10, 60, 198, 96));
+			list.add(new ItemLayoutParams(214, 163, 96, 96));
+			list.add(new ItemLayoutParams(10, 267, 200, 200));
 			break;
 		case COUNT_4:
-			list.add(new ItemLayoutParams(10, 57, 197, 200));
-			list.add(new ItemLayoutParams(213, 57, 97, 200));
-			list.add(new ItemLayoutParams(10, 264, 97, 200));
-			list.add(new ItemLayoutParams(113, 264, 197, 200));
+			list.add(new ItemLayoutParams(10, 60, 197, 200));
+			list.add(new ItemLayoutParams(213, 60, 97, 200));
+			list.add(new ItemLayoutParams(10, 267, 97, 200));
+			list.add(new ItemLayoutParams(113, 267, 197, 200));
 			break;
 		case COUNT_5:
-			list.add(new ItemLayoutParams(10, 57, 198, 200));
-			list.add(new ItemLayoutParams(213, 57, 96, 96));
-			list.add(new ItemLayoutParams(213, 160, 96, 96));
-			list.add(new ItemLayoutParams(10, 264, 96, 200));
-			list.add(new ItemLayoutParams(113, 264, 197, 200));
+			list.add(new ItemLayoutParams(10, 60, 198, 200));
+			list.add(new ItemLayoutParams(213, 60, 96, 96));
+			list.add(new ItemLayoutParams(213, 163, 96, 96));
+			list.add(new ItemLayoutParams(10, 267, 96, 200));
+			list.add(new ItemLayoutParams(113, 267, 197, 200));
 			break;
 		case COUNT_6:
-			list.add(new ItemLayoutParams(10, 57, 198, 200));
-			list.add(new ItemLayoutParams(213, 57, 96, 96));
-			list.add(new ItemLayoutParams(213, 160, 96, 96));
-			list.add(new ItemLayoutParams(10, 264, 96, 96));
-			list.add(new ItemLayoutParams(10, 367, 96, 96));
-			list.add(new ItemLayoutParams(113, 264, 198, 200));
+			list.add(new ItemLayoutParams(10, 60, 198, 200));
+			list.add(new ItemLayoutParams(213, 60, 96, 96));
+			list.add(new ItemLayoutParams(213, 163, 96, 96));
+			list.add(new ItemLayoutParams(10, 267, 96, 96));
+			list.add(new ItemLayoutParams(10, 370, 96, 96));
+			list.add(new ItemLayoutParams(113, 267, 198, 200));
 			break;
 		case COUNT_7:
-			list.add(new ItemLayoutParams(10, 57, 198, 200));
-			list.add(new ItemLayoutParams(215, 57, 96, 96));  //将213改成了215
-			list.add(new ItemLayoutParams(215, 160, 96, 96)); //将213改成了215
-			list.add(new ItemLayoutParams(10, 264, 96, 96));
-			list.add(new ItemLayoutParams(10, 367, 96, 96));
-			list.add(new ItemLayoutParams(113, 264, 198, 96));
-			list.add(new ItemLayoutParams(113, 367, 198, 96));
+			list.add(new ItemLayoutParams(10, 60, 198, 200));
+			list.add(new ItemLayoutParams(215, 60, 96, 96));  //将213改成了215
+			list.add(new ItemLayoutParams(215, 163, 96, 96)); //将213改成了215
+			list.add(new ItemLayoutParams(10, 267, 96, 96));
+			list.add(new ItemLayoutParams(10, 370, 96, 96));
+			list.add(new ItemLayoutParams(113, 267, 198, 96));
+			list.add(new ItemLayoutParams(113, 370, 198, 96));
 			break;
 		case COUNT_8:
-			list.add(new ItemLayoutParams(10, 57, 198, 96));
-			list.add(new ItemLayoutParams(213, 57, 96, 96));
-			list.add(new ItemLayoutParams(10, 160, 96, 96));
-			list.add(new ItemLayoutParams(112, 160, 96, 96));
-			list.add(new ItemLayoutParams(214, 160, 96, 96));
-			list.add(new ItemLayoutParams(10, 263, 96, 96));
-			list.add(new ItemLayoutParams(10, 366, 96, 96));
-			list.add(new ItemLayoutParams(112, 263, 198, 200));
+			list.add(new ItemLayoutParams(10, 60, 198, 96));
+			list.add(new ItemLayoutParams(213, 60, 96, 96));
+			list.add(new ItemLayoutParams(10, 163, 96, 96));
+			list.add(new ItemLayoutParams(112, 163, 96, 96));
+			list.add(new ItemLayoutParams(214, 163, 96, 96));
+			list.add(new ItemLayoutParams(10, 267, 96, 96));
+			list.add(new ItemLayoutParams(10, 370, 96, 96));
+			list.add(new ItemLayoutParams(112, 267, 198, 200));
 			break;
 		default:
 			break;
@@ -211,7 +211,7 @@ public class BinderLayout extends AbsoluteLayout{
 			int windowWidth = display.getWidth();
 			float scale = windowWidth / (float)320;  //因为iphone版的是基于320的基础上设置坐标
 			this.x = (int) (x*scale);
-			this.y = (int) ((y-57)*scale);
+			this.y = (int) ((y-60)*scale);
 			this.width = (int) (width*scale);
 			this.height = (int) (height*scale);
 		}

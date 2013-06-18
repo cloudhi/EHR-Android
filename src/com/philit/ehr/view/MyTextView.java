@@ -30,6 +30,7 @@ public class MyTextView extends TextView{
 		setTextColor(Color.BLACK);
 		setBackgroundColor(Color.WHITE);
 		setGravity(Gravity.CENTER);
+		setPadding(10, 10, 10, 10);
 	}
 
 	public String getNumber() {

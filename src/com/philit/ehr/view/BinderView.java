@@ -35,6 +35,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.philit.ehr.adapter.BinderAdapter;
@@ -526,7 +527,7 @@ public class BinderView extends FrameLayout {
 	public void bringTitleToFront() {
 		if (mViewChildIndex < mViewChildren.size()) {
 			mViewChildIndex = 0;
-			if (mViewChildren.get(1) instanceof MyTextView) {
+			if (mViewChildren.get(0) instanceof ImageView) {
 				swapViewOrder();
 				isMoving = false;
 			}

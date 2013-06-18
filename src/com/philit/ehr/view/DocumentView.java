@@ -16,12 +16,14 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.philit.ehr.R;
 import com.philit.ehr.db.PeriodicalData;
+import com.slidingmenu.lib.app.SlidingFragmentActivity;
 
 public class DocumentView extends LinearLayout{
 
@@ -29,7 +31,6 @@ public class DocumentView extends LinearLayout{
 	private List<PeriodicalData> periodicalDatas;
 	private BinderLayout binderLayout;
 	private View mainView, halfTransparentView;
-	private TextView pageIndexTv;
 	private Timer timer1, timer2;
 	private int index;
 	private int num1 = -1, num2 = -1;
@@ -40,6 +41,8 @@ public class DocumentView extends LinearLayout{
 	private BigTimerTask bigTimerTask;
 	private FirstTimerTask firstTimerTask;
 	private ArrayAdapter<PeriodicalData> adapter;
+	private TextView pageIndexTv, showMenuTv;
+	private ImageView right_angle;
 	
 	public DocumentView(Context context) {
 		super(context);
@@ -65,15 +68,25 @@ public class DocumentView extends LinearLayout{
 		addView(mainView, params);
 		
 		RelativeLayout main_layout = (RelativeLayout) mainView.findViewById(R.id.main_layout);
-		
 		binderLayout = (BinderLayout) mainView.findViewById(R.id.binderLayout);
 		
 		halfTransparentView = mainView.findViewById(R.id.half_transparent);
-		
 		pageIndexTv = (TextView) mainView.findViewById(R.id.pageIndex);
+		pageIndexTv.setVisibility(View.VISIBLE);
+		showMenuTv = (TextView) findViewById(R.id.showMenuTv);
+		showMenuTv.setText(R.string.health_knowledge);
+		showMenuTv.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				((SlidingFragmentActivity)getContext()).getSlidingMenu().showMenu();
+			}
+		});
+		
+		right_angle = (ImageView) findViewById(R.id.right_angle);
+		right_angle.setImageResource(R.drawable.health_right_angle);
 		
 		pause = true;  //默认暂停
-		
 	}
 	
 	/**
@@ -128,7 +141,7 @@ public class DocumentView extends LinearLayout{
 					if (bigTimerTask == null) {
 						bigTimerTask = new BigTimerTask();
 						timer2 = new Timer(true);
-						timer2.schedule(bigTimerTask, 3000 + 400*(binderViews.size()), 2000);
+						timer2.schedule(bigTimerTask, 3000 + 400*(binderViews.size()), 3000);
 					}
 				}
 			}

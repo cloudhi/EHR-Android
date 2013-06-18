@@ -23,12 +23,15 @@ import java.util.List;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.philit.ehr.R;
+import com.philit.ehr.db.DocumentData;
+import com.philit.ehr.util.FileUtils;
 import com.philit.ehr.view.MyTextView;
 
 /**
@@ -55,11 +58,45 @@ public class BinderAdapter{
 		    imageView.setImageBitmap(bitmaps.get(i));
 		    imageView.setLayoutParams(params);
 		    imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_myrecord));
+		    imageView.setScaleType(ImageView.ScaleType.CENTER);
 		    list.add(textView);
 		    list.add(imageView);
 		}
 	}
 
+	@SuppressWarnings("deprecation")
+	public BinderAdapter(final Context context, DocumentData documentData) {
+		list = new ArrayList<View>();
+		this.bitmaps = new ArrayList<Bitmap>();
+		LayoutParams params = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+		
+		TextView textView = new MyTextView(context, documentData.getD_Name());
+		textView.setBackgroundColor(context.getResources().getColor(R.color.deep_red));
+		textView.setTextColor(Color.WHITE);
+		
+		ImageView imageView = new ImageView(context);
+		try {
+			String ext = documentData.getD_Url().substring(documentData.getD_Url().lastIndexOf("."));
+			if (ext.equals(".doc") || ext.equals(".docx")) {
+				imageView.setImageResource(R.drawable.word);
+			}else if (ext.equals(".ppt") || ext.equals(".pptx")) {
+				imageView.setImageResource(R.drawable.word);
+			}else if (ext.equals(".pdf")) {
+				imageView.setImageResource(R.drawable.word);
+			}else if (ext.equals(".txt")) {
+				imageView.setImageResource(R.drawable.word);
+			}
+		} catch (OutOfMemoryError e) {
+			e.printStackTrace();
+		}
+		imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_myrecord));
+        imageView.setScaleType(ImageView.ScaleType.CENTER);
+	    imageView.setLayoutParams(params);
+	    
+	    list.add(imageView);
+	    list.add(textView);
+	}
+	
 	public List<View> getList() {
 		return list;
 	}

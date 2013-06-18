@@ -19,7 +19,8 @@ public class Database {
 	private Dao<ArticleData, Integer> articleDao;
 	private Dao<ImageData, Integer> imageDao;
 	private Dao<DocumentData, Integer> documentDao;
-
+	private Dao<AnnouncementData, Integer> announcementDao;
+	
 	/**
 	 * 程序启动后马上初始化databaseHelper
 	 */
@@ -74,6 +75,18 @@ public class Database {
 			}
 		}
 		return documentDao;
+	}
+	
+	public Dao<AnnouncementData, Integer> getAnnouncementDao() {
+		if (announcementDao == null) {
+			try {
+				announcementDao = databaseHelper.getDao(AnnouncementData.class);
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		return announcementDao;
 	}
 	
 	/*
@@ -283,7 +296,7 @@ public class Database {
 	 */
 	
 	/**
-	 * 插入Periodical记录
+	 * 插入Document记录
 	 * @param DocumentData
 	 */
 	public void createDocument(DocumentData documentData) {
@@ -347,6 +360,41 @@ public class Database {
 			Log.i(TAG, "SQL fail <getAllDocumentCounts> : " + e.getMessage());
 		}
 		return counts;
+	}
+	
+	/*
+	 * Announcement start
+	 */
+	
+	/**
+	 * 插入Announcement记录
+	 * @param AnnouncementData
+	 */
+	public void createAnnouncement(AnnouncementData announcementData) {
+		try {
+			getAnnouncementDao().createIfNotExists(announcementData);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <createAnnouncement> : " + e.getMessage());
+		}
+	}
+	
+	/**
+	 * 返回所有公告
+	 * @return
+	 */
+	public List<AnnouncementData> getAllAnnouncementList() {
+		List<AnnouncementData> announcementDatas = new ArrayList<AnnouncementData>();
+		try {
+			announcementDatas = getAnnouncementDao()
+					.queryBuilder()
+					.orderBy(AnnouncementData.COLUMN_NAME_ANNOUNCEMENTID, false)
+					.query();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <getAllAnnouncementList> : " + e.getMessage());
+		}
+		return announcementDatas;
 	}
 	
 	// *************************

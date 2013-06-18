@@ -57,9 +57,10 @@ public class DocumentViewPager extends ViewPager{
 				List<BinderView> binderViews = new ArrayList<BinderView>();
 				for (int k = 0; k < documentDatas.size(); k++) {
 					final DocumentData documentData = documentDatas.get(k);
-					List<Bitmap> bitmaps = new ArrayList<Bitmap>();
+					/*List<Bitmap> bitmaps = new ArrayList<Bitmap>();
 					bitmaps.add(BitmapUtils.drawableToBitmap(getResources().getDrawable(R.drawable.word)));
-					BinderAdapter binderAdapter = new BinderAdapter(getContext(), documentData.getD_Name(), bitmaps);
+					BinderAdapter binderAdapter = new BinderAdapter(getContext(), documentData.getD_Name(), bitmaps);*/
+					BinderAdapter binderAdapter = new BinderAdapter(getContext(), documentData);
 					BinderView binderView = new BinderView(getContext(), binderAdapter);
 					
 					binderView.setOnClickListener(new View.OnClickListener() {
