@@ -1,4 +1,4 @@
-package com.philit.ehr.view;
+package com.philit.ehr.viewpager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +28,8 @@ import com.philit.ehr.define.Define;
 import com.philit.ehr.util.BitmapUtils;
 import com.philit.ehr.util.FileUtils;
 import com.philit.ehr.util.ShowToast;
+import com.philit.ehr.view.BinderView;
+import com.philit.ehr.view.DocumentView;
 import com.slidingmenu.lib.SlidingMenu;
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
 

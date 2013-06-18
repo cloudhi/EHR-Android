@@ -5,10 +5,10 @@
      android:clickable="true"
      android:background="@android:color/transparent" >
 
-     <com.philit.ehr.view.DocumentViewPager
+     <com.philit.ehr.viewpager.DocumentViewPager
          android:id="@+id/documentViewPager"
          android:layout_width="match_parent"
          android:layout_height="match_parent">
-     </com.philit.ehr.view.DocumentViewPager>
+     </com.philit.ehr.viewpager.DocumentViewPager>
 	
  </RelativeLayout>

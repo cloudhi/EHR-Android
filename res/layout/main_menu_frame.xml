@@ -49,6 +49,7 @@
 	    	        android:layout_marginTop="20dp"
 	    	        android:background="@color/bg_myrecord">
 	    	        <ImageButton 
+	    	            android:id="@+id/myrecord_arrow_ib"
 	    	            android:layout_width="50dp"
 	    	            android:layout_height="match_parent"
 	    	            android:src="@drawable/arrow_right"
@@ -57,7 +58,8 @@
 	    	            android:layout_width="1dp"
 	    	            android:layout_height="match_parent"
 	    	            android:background="@android:color/white"/>
-	    	        <TextView android:layout_width="wrap_content"
+	    	        <TextView 
+	    	            android:layout_width="wrap_content"
 	    	            android:layout_height="match_parent"
 	    	            android:textColor="@android:color/white"
 	    	            android:gravity="center_vertical"
@@ -73,6 +75,7 @@
 	    	        android:layout_marginTop="20dp"
 	    	        android:background="@color/bg_medication_reminder">
 	    	        <ImageButton 
+	    	            android:id="@+id/medication_arrow_ib"
 	    	            android:layout_width="50dp"
 	    	            android:layout_height="match_parent"
 	    	            android:src="@drawable/arrow_down"
@@ -97,6 +100,7 @@
 	    	        android:layout_marginTop="20dp"
 	    	        android:background="@color/bg_flowup_reminder">
 	    	        <ImageButton 
+	    	            android:id="@+id/fllowup_arrow_ib"
 	    	            android:layout_width="50dp"
 	    	            android:layout_height="match_parent"
 	    	            android:src="@drawable/arrow_down"
@@ -121,6 +125,7 @@
 	    	        android:layout_marginTop="20dp"
 	    	        android:background="@color/bg_health_knowledge">
 	    	        <ImageButton 
+	    	            android:id="@+id/health_arrow_ib"
 	    	            android:layout_width="50dp"
 	    	            android:layout_height="match_parent"
 	    	            android:src="@drawable/arrow_down"
@@ -145,6 +150,7 @@
 	    	        android:layout_marginTop="20dp"
 	    	        android:background="@color/bg_view_announcement">
 	    	        <ImageButton 
+	    	            android:id="@+id/announcement_arrow_ib"
 	    	            android:layout_width="50dp"
 	    	            android:layout_height="match_parent"
 	    	            android:src="@drawable/arrow_down"
@@ -169,6 +175,7 @@
 	    	        android:layout_marginTop="20dp"
 	    	        android:background="@color/bg_view_health_education">
 	    	        <ImageButton 
+	    	            android:id="@+id/education_arrow_ib"
 	    	            android:layout_width="50dp"
 	    	            android:layout_height="match_parent"
 	    	            android:src="@drawable/arrow_down"

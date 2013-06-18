@@ -85,4 +85,7 @@
     <string name="responsibility_userID">责任医生：</string>
     <string name="filing_units">建档单位：</string>
     <string name="filing_userID">建档人：</string>
+    <string name="publish_time">发布时间：</string>
+    <string name="publish_by">发布机构：</string>
+    <string name="announcement_detail">公告详情</string>
 </resources>

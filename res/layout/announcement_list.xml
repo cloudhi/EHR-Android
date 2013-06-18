@@ -7,13 +7,25 @@
     <include 
          android:id="@+id/headLayout"
          layout="@layout/common_head"/>
-	
+	<TextView 
+	    android:id="@+id/yearTv"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/headLayout"
+	    android:gravity="right"
+	    android:layout_marginTop="-10dp"
+	    android:paddingRight="10dp"
+	    android:textStyle="bold"
+	    android:textSize="20sp"
+	    android:textColor="@color/light_black"/>
     <ListView
-         android:id="@+id/announcement_list"
+         android:id="@+id/announcementLv"
          android:layout_width="fill_parent"
          android:layout_height="fill_parent"
+         android:paddingLeft="10dp"
+         android:paddingRight="10dp"
          android:cacheColorHint="@android:color/transparent"
-         android:layout_below="@id/headLayout"
+         android:layout_below="@id/yearTv"
          android:choiceMode="singleChoice" >
     </ListView>
 

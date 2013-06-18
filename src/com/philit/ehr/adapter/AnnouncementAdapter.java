@@ -1,7 +1,9 @@
 package com.philit.ehr.adapter;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import android.R.integer;
 import android.content.Context;
@@ -16,14 +18,18 @@ import com.philit.ehr.R;
 import com.philit.ehr.db.AnnouncementData;
 
 public class AnnouncementAdapter extends ArrayAdapter<AnnouncementData> {
-	List<AnnouncementData> datas;
+	private List<AnnouncementData> datas;
 	private LayoutInflater layoutInflater;
+	private List<String> yearMonthList;
+	private List<String> pointList;
 	
 	public AnnouncementAdapter(Context context, int layoutResourceId, List<AnnouncementData> datas) {
 		super(context, layoutResourceId, datas);
 		this.datas = datas;
 		this.layoutInflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		yearMonthList = new ArrayList<String>();
+		pointList = new ArrayList<String>();
 	}
 
 	@Override
@@ -51,18 +57,18 @@ public class AnnouncementAdapter extends ArrayAdapter<AnnouncementData> {
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		
-		AnnouncementTag commentTag = null;
+		AnnouncementTag announcementTag = null;
 		if (convertView == null) {
-			commentTag = new AnnouncementTag();
+			announcementTag = new AnnouncementTag();
 			// 获取组件布局
 			convertView = layoutInflater.inflate(R.layout.item_announcement, null);
-			commentTag.back_pointIv = (ImageView) convertView.findViewById(R.id.back_point);
-			commentTag.month_dayTv = (TextView) convertView.findViewById(R.id.month_dayTv);
-			commentTag.titleTv = (TextView) convertView.findViewById(R.id.titleTv);
+			announcementTag.back_pointIv = (ImageView) convertView.findViewById(R.id.back_point);
+			announcementTag.month_dayTv = (TextView) convertView.findViewById(R.id.month_dayTv);
+			announcementTag.titleTv = (TextView) convertView.findViewById(R.id.titleTv);
 			// 这里要注意，是使用的tag来存储数据的。
-			convertView.setTag(commentTag);
+			convertView.setTag(announcementTag);
 		} else {
-			commentTag = (AnnouncementTag) convertView.getTag();
+			announcementTag = (AnnouncementTag) convertView.getTag();
 		}
 		// 绑定数据、事件触发
 		try {
@@ -71,8 +77,21 @@ public class AnnouncementAdapter extends ArrayAdapter<AnnouncementData> {
 			int year = date.getYear() + 1900;
 			int month = date.getMonth() + 1;
 			int day = date.getDate();
-			commentTag.month_dayTv.setText(month + "/" +day);
-			commentTag.titleTv.setText(announcementData.getA_Title());
+			announcementTag.month_dayTv.setText(month + "/" +day);
+			announcementTag.titleTv.setText(announcementData.getA_Title());
+			if(!yearMonthList.contains(year + "|" +month)){
+				yearMonthList.add(year + "|" +month);
+				if (!pointList.contains(year + "|" +month + "|" +day)) {
+					pointList.add(year + "|" +month + "|" +day);
+				}
+				announcementTag.back_pointIv.setVisibility(View.VISIBLE);
+			}else {
+				if (pointList.contains(year + "|" +month + "|" +day)) {
+					announcementTag.back_pointIv.setVisibility(View.VISIBLE);
+				}else {
+					announcementTag.back_pointIv.setVisibility(View.INVISIBLE);
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

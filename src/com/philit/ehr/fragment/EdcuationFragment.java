@@ -2,7 +2,7 @@ package com.philit.ehr.fragment;
 
 import com.philit.ehr.R;
 import com.philit.ehr.R.id;
-import com.philit.ehr.view.DocumentViewPager;
+import com.philit.ehr.viewpager.DocumentViewPager;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

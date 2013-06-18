@@ -8,7 +8,7 @@ import com.philit.ehr.R.id;
 import com.philit.ehr.db.Database;
 import com.philit.ehr.db.DocumentData;
 import com.philit.ehr.define.Define;
-import com.philit.ehr.view.DocumentViewPager;
+import com.philit.ehr.viewpager.DocumentViewPager;
 
 import android.os.Bundle;
 import android.os.Environment;
