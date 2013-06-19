@@ -4,6 +4,7 @@ import com.philit.ehr.R;
 import com.philit.ehr.activity.MainActivity;
 
 import android.R.integer;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -67,11 +68,12 @@ public class MainMenuFragment extends Fragment implements OnClickListener{
 			changeArrow(myrecord_arrow_ib);
 			break;
 		case R.id.medication_layout:
-			mainActivity.switchContent(new MedicineFragment());
+			mainActivity.switchContent(new RemindFragment(1));
 			changeArrow(medication_arrow_ib);
 			break;
 		case R.id.fllowup_layout:
-			mainActivity.switchContent(new FllowUpFragment());
+			//mainActivity.switchContent(new FllowUpFragment());
+			mainActivity.switchContent(new RemindFragment(2));
 			changeArrow(fllowup_arrow_ib);
 			break;
 		case R.id.health_layout:

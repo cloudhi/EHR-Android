@@ -42,7 +42,7 @@ public class DocumentViewPager extends ViewPager{
 	private DocumentView viewTemp;
 	private List<DocumentData> documentDatas;
 	private DocumentPageAdapterInitListener listener;
-	private int pageSize = 6;
+	private int pageSize = 8;
 	
 	@SuppressLint("HandlerLeak")
 	private Handler getViewHandler = new Handler(){

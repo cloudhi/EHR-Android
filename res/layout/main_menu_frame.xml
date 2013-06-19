@@ -118,31 +118,6 @@
 	    	            android:textSize="20sp"
 	    	            android:text="@string/flowup_reminder"/>
 	    	    </LinearLayout>
- 	    	    <LinearLayout 
-	    	        android:id="@+id/announcement_layout"
-	    	        android:layout_width="wrap_content"
-	    	        android:layout_height="50dp"
-	    	        android:layout_marginTop="20dp"
-	    	        android:background="@color/bg_view_announcement">
-	    	        <ImageButton 
-	    	            android:id="@+id/announcement_arrow_ib"
-	    	            android:layout_width="50dp"
-	    	            android:layout_height="match_parent"
-	    	            android:src="@drawable/arrow_down"
-	    	            android:background="@android:color/transparent"/>
-	    	        <View 
-	    	            android:layout_width="1dp"
-	    	            android:layout_height="match_parent"
-	    	            android:background="@android:color/white"/>
-	    	        <TextView android:layout_width="wrap_content"
-	    	            android:layout_height="match_parent"
-	    	            android:textColor="@android:color/white"
-	    	            android:gravity="center_vertical"
-	    	            android:paddingLeft="10dp"
-	    	            android:paddingRight="20dp"
-	    	            android:textSize="20sp"
-	    	            android:text="@string/view_announcement"/>
-	    	    </LinearLayout>
 	    	    <LinearLayout 
 	    	        android:id="@+id/health_layout"
 	    	        android:layout_width="wrap_content"
@@ -167,6 +142,31 @@
 	    	            android:paddingRight="20dp"
 	    	            android:textSize="20sp"
 	    	            android:text="@string/health_knowledge"/>
+	    	    </LinearLayout>
+ 	    	    <LinearLayout 
+	    	        android:id="@+id/announcement_layout"
+	    	        android:layout_width="wrap_content"
+	    	        android:layout_height="50dp"
+	    	        android:layout_marginTop="20dp"
+	    	        android:background="@color/bg_view_announcement">
+	    	        <ImageButton 
+	    	            android:id="@+id/announcement_arrow_ib"
+	    	            android:layout_width="50dp"
+	    	            android:layout_height="match_parent"
+	    	            android:src="@drawable/arrow_down"
+	    	            android:background="@android:color/transparent"/>
+	    	        <View 
+	    	            android:layout_width="1dp"
+	    	            android:layout_height="match_parent"
+	    	            android:background="@android:color/white"/>
+	    	        <TextView android:layout_width="wrap_content"
+	    	            android:layout_height="match_parent"
+	    	            android:textColor="@android:color/white"
+	    	            android:gravity="center_vertical"
+	    	            android:paddingLeft="10dp"
+	    	            android:paddingRight="20dp"
+	    	            android:textSize="20sp"
+	    	            android:text="@string/view_announcement"/>
 	    	    </LinearLayout>
 	    	    <LinearLayout 
 	    	        android:id="@+id/education_layout"

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="app_name">居民健康档案</string>
     <string name="properties">SlidingMenu Properties</string>
@@ -99,4 +99,112 @@
     <string name="A_Missionary">宣教人：</string>
      <string name="A_Partners">合作伙伴：</string>
     <string name="A_Number">参与人数：</string>
+    
+    <!-- clock start -->
+	<string name="app_label">提醒new</string>
+    <string name="alarm_list_title" >提醒</string>
+    <string name="add_alarm">添加提醒</string>
+    <string name="menu_desk_clock">座钟</string>
+    <string name="menu_edit_alarm" >修改提醒设置</string>
+    <string name="delete_alarm" >取消提醒</string>
+    <string name="enable_alarm" >启用提醒</string>
+    <string name="disable_alarm">停用提醒</string>
+    <string name="delete_alarm_confirm" >将会取消此提醒。</string>
+    <string name="show_clock" >显示时钟</string>
+    <string name="hide_clock" >隐藏时钟</string>
+    <string name="label" >提示语</string>
+    <string name="default_label">提醒</string>
+    <string name="set_alarm" >设置提醒</string>
+    <string name="alarm_vibrate" >振动</string>
+    <string name="alarm_repeat" >重复</string>
+    <string name="alert" >提示音</string>
+    <string name="time" >时间</string>
+    <string name="alarm_alert_dismiss_text">取消</string>
+    <string name="alarm_alert_alert_silenced">提醒响铃时间为 <xliff:g id="MINUTES">%d</xliff:g> 分钟</string>
+    <string name="alarm_alert_snooze_text">暂停再响</string>
+    <string name="alarm_alert_snooze_set">暂停 <xliff:g id="MINUTES">%d</xliff:g> 分钟。</string>
+  	<string-array name="alarm_set">
+    <item>已将此提醒设置为从现在起不到 1 分钟后提醒。</item>
+    <item>已将此提醒设置为从现在起 <xliff:g id="DAYS">%1$s</xliff:g>后再提醒。</item>
+    <item>已将此提醒设置为从现在起 <xliff:g id="HOURS">%2$s</xliff:g>后再提醒。</item>
+    <item>已将此提醒设置为从现在起 <xliff:g id="DAYS">%1$s</xliff:g> <xliff:g id="HOURS">%2$s</xliff:g>后再提醒。</item>
+    <item>已将此提醒设置为从现在起 <xliff:g id="MINUTES">%3$s</xliff:g>后再提醒。</item>
+    <item>已将此提醒设置为从现在起 <xliff:g id="DAYS">%1$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>后再提醒。</item>
+    <item>已将此提醒设置为从现在起 <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>后再提醒。</item>
+    <item>已将该提醒设置为从现在起 <xliff:g id="DAYS">%1$s</xliff:g> <xliff:g id="HOURS">%2$s</xliff:g> <xliff:g id="MINUTES">%3$s</xliff:g>后再提醒。</item>
+  </string-array>
+    <string name="day" >1 天</string>
+    <string name="days" ><xliff:g id="DAYS">%s</xliff:g> 天</string>
+    <string name="hour" >1 小时</string>
+    <string name="hours" ><xliff:g id="HOURS">%s</xliff:g> 小时</string>
+    <string name="minute" >1 分钟</string>
+    <string name="minutes" ><xliff:g id="MINUTES">%s</xliff:g> 分钟</string>
+    <string name="every_day" >每天</string>
+    <string name="never" >一律不</string>
+    <string name="day_concat">, </string>
+    <string name="clock_instructions">选择要显示的时钟。</string>
+    <string name="analog_gadget" >模拟时钟</string>
+    <string name="settings">设置</string>
+    <string name="alarm_in_silent_mode_title" >静音模式下提醒响</string>
+    <string name="alarm_in_silent_mode_summary" >手机处于静音模式时，提醒仍会响</string>
+    <string name="snooze_duration_title">再响间隔</string>
+  <string-array name="snooze_duration_entries">
+    <item>5 分钟</item>
+    <item>10 分钟</item>
+    <item>15 分钟</item>
+    <item>20 分钟</item>
+    <item>25 分钟</item>
+    <item>30 分钟</item>
+  </string-array>
+  <string-array name="snooze_duration_values">
+    <item>5</item>
+    <item>10</item>
+    <item>15</item>
+    <item>20</item>
+    <item>25</item>
+    <item>30</item>
+  </string-array>
+    <string name="done" >完成</string>
+    <string name="revert" >还原</string>
+    <string name="delete" >删除</string>
+    <string name="delete_clock" >删除提醒</string>
+    <string name="alarm_volume_title">提醒音量</string>
+    <string name="alarm_volume_summary" >设置提醒音量</string>
+    <string name="silent_alarm_summary">静音</string>
+    <string name="alarm_notify_text">选择暂停或关闭此提醒。</string>
+    <string name="alarm_notify_snooze_label"><xliff:g id="LABEL">%s</xliff:g>（已暂停）</string>
+    <string name="alarm_notify_snooze_text">已将提醒设置为从现在起 <xliff:g id="TIME">%s</xliff:g>后再提醒。选中可以取消。</string>
+    <string name="volume_button_setting_title">音量和相机</string>
+    <string name="volume_button_dialog_title">按钮的作用</string>
+    <string name="volume_button_setting_summary">设置这些按钮在提醒响起时的作用</string>
+  <string-array name="volume_button_setting_entries">
+    <item>无</item>
+    <item>暂停</item>
+    <item>关闭</item>
+  </string-array>
+  <string-array name="volume_button_setting_values">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+  </string-array>
+    <string name="alarm_button_description" >提醒</string>
+    <string name="gallery_button_description" >图库</string>
+    <string name="music_button_description">音乐</string>
+    <string name="nightmode_button_description" >调暗</string>
+    <string name="home_button_description" >启动器</string>
+    <string name="desk_clock_button_description" >时钟显示</string>
+    <string name="battery_charging_level" ><xliff:g id="NUMBER">%d</xliff:g><xliff:g id="PERCENT">%%</xliff:g></string>
+    <string name="weather_fetch_failure" >目前无法提供天气信息。</string>
+    <string name="menu_item_dock_settings">底座设置</string>
+    <!-- 新增 -->
+    <string name="times">次数</string>
+    <string name="interval">间隔</string>
+    <string name="notification_default_summary">默认提示音</string>
+    <string-array name="choose_bell">
+        <item>静音</item>
+		<item>系统提示音</item>
+	</string-array>
+	<!-- clcok end -->
+	<string name="medicine_notice_title">基层健康档案 用药提醒</string>
+	<string name="medicine_notice_body">用药时间到！</string>
 </resources>

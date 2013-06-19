@@ -4,8 +4,8 @@
     <color name="bg_myrecord">#3499DB</color>
     <color name="bg_medication_reminder">#628179</color>
     <color name="bg_flowup_reminder">#21AABD</color>
-    <color name="bg_health_knowledge">#d02121</color>
-    <color name="bg_view_announcement">#644C64</color>
+    <color name="bg_health_knowledge">#FFB43C</color>
+    <color name="bg_view_announcement">#E63434</color>
     <color name="bg_view_health_education">#639B1D</color>
     <color name="bg_login">#3399DB</color>
     <color name="light_black">#bb000000</color>
@@ -18,4 +18,7 @@
     <color name="deep_red">#AC1B22</color>
     <color name="bg_item">#E2E2E0</color>
     <color name="light_green">#78A83D</color>
+    <color name="blue">#558BFC</color>
+    <color name="light_blue">#E6F3F8</color>
+    <color name="bg_health_title">#d3a65e</color>
 </resources>

@@ -30,25 +30,32 @@ public class DocumentFragment extends Fragment{
 		DocumentViewPager documentViewPager = (DocumentViewPager)mainView.findViewById(R.id.documentViewPager);
 		List<DocumentData> documentDatas = Database.getInstance().getAllDocumentList();
 		if (documentDatas.size() == 0) {
-			for (int i = 0; i < 8; i++) {
+			for (int i = 0; i < 10; i++) {
 				String SDCardRoot = Environment.getExternalStorageDirectory()
 						.getAbsolutePath()
 						+ File.separator;
 				DocumentData documentData = new DocumentData(i,"健康知识宣传文档" + i +".doc", SDCardRoot + Define.DOCUMENT_PATH + "test.doc",1, "2013-06-12 10:23:11");
 				Database.getInstance().createDocument(documentData);
 			}
-			for (int i = 8; i < 16; i++) {
+			for (int i = 10; i < 20; i++) {
 				String SDCardRoot = Environment.getExternalStorageDirectory()
 						.getAbsolutePath()
 						+ File.separator;
 				DocumentData documentData2 = new DocumentData(i*2,"健康知识宣传文档" + i +".pdf", SDCardRoot + Define.DOCUMENT_PATH + "网上挂号系统.pdf",1, "2013-06-12 10:23:11");
 				Database.getInstance().createDocument(documentData2);
 			}
-			for (int i = 16; i < 24; i++) {
+			for (int i = 20; i < 30; i++) {
 				String SDCardRoot = Environment.getExternalStorageDirectory()
 						.getAbsolutePath()
 						+ File.separator;
 				DocumentData documentData3 = new DocumentData(i*3,"健康知识宣传文档" + i +".txt", SDCardRoot + Define.DOCUMENT_PATH + "IP.txt",1, "2013-06-12 10:23:11");
+				Database.getInstance().createDocument(documentData3);
+			}
+			for (int i = 30; i < 40; i++) {
+				String SDCardRoot = Environment.getExternalStorageDirectory()
+						.getAbsolutePath()
+						+ File.separator;
+				DocumentData documentData3 = new DocumentData(i*3,"健康知识宣传文档" + i +".ppt", SDCardRoot + Define.DOCUMENT_PATH + "一路前行.ppt",1, "2013-06-12 10:23:11");
 				Database.getInstance().createDocument(documentData3);
 			}
 		}

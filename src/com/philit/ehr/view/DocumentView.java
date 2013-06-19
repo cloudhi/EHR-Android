@@ -83,7 +83,7 @@ public class DocumentView extends LinearLayout{
 		});
 		
 		right_angle = (ImageView) findViewById(R.id.right_angle);
-		right_angle.setImageResource(R.drawable.document_right_angle);
+		right_angle.setImageResource(R.drawable.health_right_angle);
 		
 		pause = true;  //默认暂停
 	}

@@ -1,8 +1,100 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:clickable="true"
-    android:background="@color/bg_medication_reminder">
-    	
-</RelativeLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/base_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"> 
+	
+    <RelativeLayout 
+	    android:id="@+id/headerLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:background="@android:color/white">
+	    
+	</RelativeLayout>
+    
+    <LinearLayout android:id="@+id/add_alarm"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="fill_parent"
+       android:layout_height="40dp"
+       android:background="@drawable/add_layout_selector"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:duplicateParentState="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:drawableLeft="@drawable/add_alarm"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/add_alarm" 
+            android:textColor="@color/blue"
+		    android:textSize="18sp"/>
+
+    </LinearLayout>
+	<View 
+	    android:id="@+id/category_divder"
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="?android:attr/listDivider"
+	    />
+	
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:gravity="fill_horizontal"
+        android:src="@android:drawable/divider_horizontal_dark" />
+
+    <ListView
+        android:id="@+id/alarms_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <!-- <ImageButton android:id="@+id/desk_clock_button"
+            style="@style/ButtonStripLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_clock_strip_desk_clock"
+            android:contentDescription="@string/desk_clock_button_description"/>
+
+        <com.philit.ehr.superclock.DigitalClock
+            style="@style/ButtonStripRight"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="true">
+
+                <TextView android:id="@+id/timeDisplay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="6dip"
+                    android:textSize="48sp"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+                <TextView android:id="@+id/am_pm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary" />
+
+            </LinearLayout>
+
+      </com.philit.ehr.superclock.DigitalClock> -->
+
+    </LinearLayout>
+
+</LinearLayout>

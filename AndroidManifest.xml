@@ -8,6 +8,15 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    
+    <!-- clock permission -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
     
     <application 
         android:name="com.philit.ehr.EHRApp"
@@ -28,6 +37,78 @@
         </activity>
         <activity android:label="@string/app_name" android:name=".activity.LoginActivity">
         </activity>
+        
+        <!-- clock start -->
+        <activity android:name=".superclock.AlarmClock"
+                android:label="@string/app_label"
+                android:taskAffinity=""
+                android:excludeFromRecents="true"
+                android:screenOrientation="portrait"
+                android:exported="true" >
+        </activity>
+        <activity-alias android:name=".superclock.AlarmClock"
+                android:targetActivity=".superclock.AlarmClock"
+                android:exported="true" />
+
+        <activity android:name=".superclock.SettingsActivity"
+                android:label="@string/settings"
+                android:screenOrientation="portrait"
+                android:excludeFromRecents="true"
+                >
+        </activity>
+
+        <activity 
+            android:name=".superclock.SetAlarm" 
+            android:label="@string/about"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".superclock.AlarmAlert"
+                android:excludeFromRecents="true"
+                android:launchMode="singleInstance"
+                android:screenOrientation="portrait"/>
+
+        <activity android:name=".superclock.AlarmAlertFullScreen"
+                android:excludeFromRecents="true"
+                android:theme="@android:style/Theme.Wallpaper.NoTitleBar"
+                android:launchMode="singleInstance"
+                android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".superclock.expand.ChooseBellActivity"
+                android:screenOrientation="portrait">
+        </activity>
+        <receiver android:name=".superclock.AlarmReceiver">
+            <intent-filter>
+               <action android:name="com.philit.ehr.superclock.ALARM_ALERT" />
+               <action android:name="Alarm_killed" />
+               <action android:name="cancel_snooze" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".superclock.AlarmKlaxon">
+            <intent-filter>
+                <action android:name="com.philit.ehr.superclock.ALARM_ALERT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".superclock.AlarmInitReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".alarmclock.AnalogAppWidgetProvider" android:label="@string/analog_gadget"
+        	android:icon="@drawable/ic_widget_analog_clock">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.oldName" android:value=".superclock.AnalogAppWidgetProvider" />
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/analog_appwidget" />
+        </receiver>
+        <provider android:name=".superclock.AlarmProvider" android:authorities="com.philit.ehr"></provider>
+        <!-- clock end -->
     </application>
 
 </manifest>

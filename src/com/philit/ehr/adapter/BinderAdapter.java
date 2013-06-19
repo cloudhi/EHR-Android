@@ -50,7 +50,7 @@ public class BinderAdapter{
 		for (int i = 0; i < bitmaps.size(); i++) {
 			TextView textView = new MyTextView(context, title);
 			//textView.setText(title);
-			textView.setBackgroundColor(context.getResources().getColor(R.color.bg_view_announcement));
+			textView.setBackgroundColor(context.getResources().getColor(R.color.bg_health_title));
 			textView.setTextColor(Color.WHITE);
 			
 			ImageView imageView = new ImageView(context);
@@ -71,25 +71,29 @@ public class BinderAdapter{
 		LayoutParams params = new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
 		
 		TextView textView = new MyTextView(context, documentData.getD_Name());
-		textView.setBackgroundColor(context.getResources().getColor(R.color.deep_red));
+		textView.setBackgroundColor(context.getResources().getColor(R.color.bg_flowup_reminder));
 		textView.setTextColor(Color.WHITE);
 		
 		ImageView imageView = new ImageView(context);
 		try {
 			String ext = documentData.getD_Url().substring(documentData.getD_Url().lastIndexOf("."));
 			if (ext.equals(".doc") || ext.equals(".docx")) {
-				imageView.setImageResource(R.drawable.word);
+				imageView.setImageResource(R.drawable.icon_word);
+				imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_myrecord));
 			}else if (ext.equals(".ppt") || ext.equals(".pptx")) {
-				imageView.setImageResource(R.drawable.word);
+				imageView.setImageResource(R.drawable.icon_ppt);
+				imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_health_knowledge));
 			}else if (ext.equals(".pdf")) {
-				imageView.setImageResource(R.drawable.word);
+				imageView.setImageResource(R.drawable.icon_pdf);
+				imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_view_announcement));
 			}else if (ext.equals(".txt")) {
-				imageView.setImageResource(R.drawable.word);
+				imageView.setImageResource(R.drawable.icon_txt);
+				imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_view_health_education));
 			}
 		} catch (OutOfMemoryError e) {
 			e.printStackTrace();
 		}
-		imageView.setBackgroundColor(context.getResources().getColor(R.color.bg_myrecord));
+		
         imageView.setScaleType(ImageView.ScaleType.CENTER);
 	    imageView.setLayoutParams(params);
 	    

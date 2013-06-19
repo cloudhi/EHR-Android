@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2010, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+	
+    <RelativeLayout 
+	    android:id="@+id/headerLayout"
+	    android:layout_width="fill_parent"
+	    android:layout_height="50dp"
+	    android:background="@android:color/white">
+	    
+	</RelativeLayout>
+    
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawSelectorOnTop="false"/>
+	
+    <View 
+	    android:id="@+id/category_divder"
+	    android:layout_width="fill_parent"
+	    android:layout_height="1dp"
+	    android:background="?android:attr/listDivider"
+	    />
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+
+        <Button android:id="@+id/alarm_save"
+            android:focusable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:background="@drawable/add_clock_btn_selector"
+            android:text="@string/done"/>
+	
+        <ImageView
+	        android:src="@drawable/divider_vertical_dark"
+	        android:background="?android:attr/windowBackground"
+	        android:layout_width="1dp"
+	        android:layout_height="fill_parent"
+	        android:paddingTop="4dip"
+	        android:paddingBottom="4dip"
+	        android:scaleType="fitXY"
+	        android:gravity="fill_vertical" />
+        
+        <Button android:id="@+id/alarm_revert"
+            android:focusable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/add_clock_btn_selector"
+            android:text="@string/revert"/>
+
+        <ImageView
+	        android:src="@drawable/divider_vertical_dark"
+	        android:background="?android:attr/windowBackground"
+	        android:layout_width="1dp"
+	        android:layout_height="fill_parent"
+	        android:paddingTop="4dip"
+	        android:paddingBottom="4dip"
+	        android:scaleType="fitXY"
+	        android:gravity="fill_vertical" />
+        
+        <Button android:id="@+id/alarm_delete"
+            android:focusable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/add_clock_btn_selector"
+            android:text="@string/delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>
