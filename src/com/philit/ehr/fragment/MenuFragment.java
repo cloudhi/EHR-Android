@@ -29,7 +29,7 @@ public class MenuFragment extends ListFragment{
 		datas.add(new MenuData(getResources().getColor(R.color.bg_flowup_reminder), getString(R.string.flowup_reminder)));
 		datas.add(new MenuData(getResources().getColor(R.color.bg_health_knowledge), getString(R.string.health_knowledge)));
 		datas.add(new MenuData(getResources().getColor(R.color.bg_view_announcement), getString(R.string.view_announcement)));
-		datas.add(new MenuData(getResources().getColor(R.color.bg_view_health_education), getString(R.string.view_health_education)));
+		datas.add(new MenuData(getResources().getColor(R.color.bg_view_health_education), getString(R.string.health_education)));
 		
 		MenuAdapter adapter = new MenuAdapter(getActivity(), 0, datas);
 		

@@ -20,6 +20,7 @@ public class Database {
 	private Dao<ImageData, Integer> imageDao;
 	private Dao<DocumentData, Integer> documentDao;
 	private Dao<AnnouncementData, Integer> announcementDao;
+	private Dao<EducationData, Integer> educationDao;
 	
 	/**
 	 * 程序启动后马上初始化databaseHelper
@@ -87,6 +88,18 @@ public class Database {
 			}
 		}
 		return announcementDao;
+	}
+	
+	public Dao<EducationData, Integer> getEducationDao() {
+		if (educationDao == null) {
+			try {
+				educationDao = databaseHelper.getDao(EducationData.class);
+			} catch (SQLException e) {
+				e.printStackTrace();
+				return null;
+			}
+		}
+		return educationDao;
 	}
 	
 	/*
@@ -368,7 +381,7 @@ public class Database {
 	
 	/**
 	 * 插入Announcement记录
-	 * @param AnnouncementData
+	 * @param announcementData
 	 */
 	public void createAnnouncement(AnnouncementData announcementData) {
 		try {
@@ -395,6 +408,41 @@ public class Database {
 			Log.i(TAG, "SQL fail <getAllAnnouncementList> : " + e.getMessage());
 		}
 		return announcementDatas;
+	}
+	
+	/*
+	 * Announcement start
+	 */
+	
+	/**
+	 * 插入Education记录
+	 * @param educationData
+	 */
+	public void createEducation(EducationData educationData) {
+		try {
+			getEducationDao().createIfNotExists(educationData);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <createEducation> : " + e.getMessage());
+		}
+	}
+	
+	/**
+	 * 返回所有健康教育活动
+	 * @return
+	 */
+	public List<EducationData> getAllEducationList() {
+		List<EducationData> educationDatas = new ArrayList<EducationData>();
+		try {
+			educationDatas = getEducationDao()
+					.queryBuilder()
+					.orderBy(EducationData.COLUMN_NAME_ACTIVITYID, false)
+					.query();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			Log.i(TAG, "SQL fail <getAllEducationList> : " + e.getMessage());
+		}
+		return educationDatas;
 	}
 	
 	// *************************

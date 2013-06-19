@@ -50,7 +50,7 @@ public class BinderAdapter{
 		for (int i = 0; i < bitmaps.size(); i++) {
 			TextView textView = new MyTextView(context, title);
 			//textView.setText(title);
-			textView.setBackgroundColor(context.getResources().getColor(R.color.deep_red));
+			textView.setBackgroundColor(context.getResources().getColor(R.color.bg_view_announcement));
 			textView.setTextColor(Color.WHITE);
 			
 			ImageView imageView = new ImageView(context);

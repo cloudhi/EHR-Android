@@ -1,8 +1,6 @@
 package com.philit.ehr.fragment;
 
 import com.philit.ehr.R;
-import com.philit.ehr.R.id;
-import com.philit.ehr.R.layout;
 
 import android.content.Context;
 import android.os.Bundle;

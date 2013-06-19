@@ -70,7 +70,6 @@ public class DocumentView extends LinearLayout{
 		RelativeLayout main_layout = (RelativeLayout) mainView.findViewById(R.id.main_layout);
 		binderLayout = (BinderLayout) mainView.findViewById(R.id.binderLayout);
 		
-		halfTransparentView = mainView.findViewById(R.id.half_transparent);
 		pageIndexTv = (TextView) mainView.findViewById(R.id.pageIndex);
 		pageIndexTv.setVisibility(View.VISIBLE);
 		showMenuTv = (TextView) findViewById(R.id.showMenuTv);
@@ -84,7 +83,7 @@ public class DocumentView extends LinearLayout{
 		});
 		
 		right_angle = (ImageView) findViewById(R.id.right_angle);
-		right_angle.setImageResource(R.drawable.health_right_angle);
+		right_angle.setImageResource(R.drawable.document_right_angle);
 		
 		pause = true;  //默认暂停
 	}

@@ -83,7 +83,7 @@ public class MainMenuFragment extends Fragment implements OnClickListener{
 			changeArrow(announcement_arrow_ib);
 			break;
 		case R.id.education_layout:
-			mainActivity.switchContent(new EdcuationFragment());
+			mainActivity.switchContent(new EducationFragment());
 			changeArrow(education_arrow_ib);
 			break;
 		}

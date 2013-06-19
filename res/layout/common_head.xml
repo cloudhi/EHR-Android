@@ -3,8 +3,7 @@
        android:id="@+id/headLayout"
        android:layout_width="fill_parent"
        android:layout_height="60dp"
-       android:orientation="horizontal"
-       android:layout_marginBottom="10dp">
+       android:orientation="horizontal">
        <TextView 
            android:id="@+id/showMenuTv"
            android:layout_width="wrap_content"

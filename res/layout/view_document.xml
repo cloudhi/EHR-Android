@@ -16,12 +16,5 @@
          android:background="@android:color/transparent"
          android:layout_below="@id/headLayout">
      </com.philit.ehr.view.BinderLayout>
-     
-     <View 
-        android:id="@+id/half_transparent"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:background="@color/black_transparent"
-        android:visibility="gone"/>
 	
  </RelativeLayout>

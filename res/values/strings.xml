@@ -61,7 +61,7 @@
     <string name="flowup_reminder">随访预约提醒</string>
     <string name="health_knowledge">健康知识宣传</string>
     <string name="view_announcement">查看公告</string>
-    <string name="view_health_education">查看健康教育</string>
+    <string name="health_education">健康教育活动</string>
     <string name="last_sync">上次同步: 2013.6.15 15:33</string>
     <string name="username">用户名</string>
     <string name="password">密码</string>
@@ -88,4 +88,15 @@
     <string name="publish_time">发布时间：</string>
     <string name="publish_by">发布机构：</string>
     <string name="announcement_detail">公告详情</string>
+    <string name="education_detail">健康教育活动详情</string>
+    <string name="A_DateTime">时间：</string>
+    <string name="A_Location">地点：</string>
+    <string name="A_Object">对象：</string>
+    <string name="A_Crowd">人群：</string>
+    <string name="A_Form">形式：</string>
+    <string name="A_Organizers">主办单位：</string>
+    <string name="A_Duration">持续时间：</string>
+    <string name="A_Missionary">宣教人：</string>
+     <string name="A_Partners">合作伙伴：</string>
+    <string name="A_Number">参与人数：</string>
 </resources>
